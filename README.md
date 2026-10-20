@@ -156,3 +156,4 @@ Faites des captures d'écran de chaque étape pour le compte rendu.
 | `Port 8000 already in use` | Changez `PORT` dans `.env` **et** `API_URL` dans `core/config.ts` |
 | `node: command not found` / version < 20 | Installez Node avec nvm (section 5) |
 | Images produits absentes | Elles sont dans `frontend/public/assets/products/` ; un placeholder s'affiche sinon |
+# test
