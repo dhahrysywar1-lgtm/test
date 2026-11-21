@@ -43,7 +43,14 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: 22
+      - name: Grant MySQL permissions for tests
+        run: |
+          MYSQL_CONTAINER=$(docker ps -q --filter ancestor=mysql:8.0 | head -n 1)
+          docker exec "$MYSQL_CONTAINER" mysql -uroot -proot_password -e "GRANT ALL PRIVILEGES ON *.* TO 'nova'@'%'; FLUSH PRIVILEGES;"
 
+      - name: Run backend tests
+        working-directory: backend
+        run: npm test --if-present
       - name: Install backend dependencies
         working-directory: backend
         run: npm ci
