@@ -1,0 +1,9 @@
+
+.git
+**/node_modules
+**/dist
+**/.angular
+**/.env
+**/.env.*
+!.env.example
+npm-debug.log

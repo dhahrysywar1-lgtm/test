@@ -1,5 +1,5 @@
 // URL de l'API REST (backend Express). À modifier si le port change.
-export const API_URL = 'http://localhost:8000/api';
+export const API_URL = '/api';
 export const PLACEHOLDER_IMG = '/assets/placeholder.svg';
 export const LOW_STOCK_THRESHOLD = 10;
 
